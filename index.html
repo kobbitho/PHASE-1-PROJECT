@@ -5,35 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game of Thrones Quote Generator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
 </head>
 <body>
     <div class="container">
         <h1>Winter is Coming...</h1>
-        <p>Get a random Game of Thrones quote from the API!</p>
+        <p>Get a random Game of Thrones quote!!</p>
         <button id="generate-quote">Generate Quote</button>
         <div id="quote-box">
             <p id="quote"></p>
             <p id="character"></p>
             <div id="actions">
                 <button id="download-quote">Download</button>
-                <button id="share-quote">Share</button>
-                <button id="like-quote">Like <i id="like-icon" class="fas fa-heart"></i></button>
                 <div id="reactions">
-                    <i class="fas fa-fire" id="fire-reaction"></i>
-                    <i class="fas fa-heart" id="heart-reaction"></i>
-                    <i class="fas fa-laugh" id="laugh-reaction"></i>
-                </div>
+                    <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+                    </div>
                 <textarea id="comment" placeholder="Add your comment..."></textarea>
                 <button id="submit-comment">Submit Comment</button>
             </div>
         </div>
-        <div id="mode-toggle">
-            <i class="fas fa-sun" id="light-mode-icon"></i>
-            <i class="fas fa-moon" id="dark-mode-icon"></i>
-        </div>
     </div>
-    
     <script src="https://kit.fontawesome.com/your-fontawesome-kit-code.js"></script>
     <script src="script.js"></script>
+    <script>function myFunction(x) {
+        x.classList.toggle("fa-thumbs-down")};
+</script>
 </body>
 </html>
