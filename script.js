@@ -1,4 +1,7 @@
 // No changes required for light/dark mode removal 
+document.addEventListener("DOMContentLoaded", () => {
+  const baseURL = "https://api.gameofthronesquotes.xyz/v1/random";
+
 
 const generateQuoteButton = document.getElementById("generate-quote");
 const quoteText = document.getElementById("quote");
@@ -9,7 +12,7 @@ const commentTextarea = document.getElementById("comment");
 const submitCommentButton = document.getElementById("submit-comment");
 const authorElement = document.getElementById("author");  // Reference for author element
 
-let isLiked = false; // Flag to track like state
+
 
 generateQuoteButton.addEventListener("click", function() {
   fetch("https://api.gameofthronesquotes.xyz/v1/random")
@@ -21,5 +24,17 @@ generateQuoteButton.addEventListener("click", function() {
     })
     .catch(error => console.error(error));
 });
-
+})
 // ... existing like button and comment functionality logic ...
+
+
+const submitCommentButton = document.getElementById("submit-comment");
+submitCommentButton.addEventListener("click", function(e) {
+  e.preventDefault();
+  let comment = document.querySelector("#comment").value;
+
+  let commentObj ={
+    title: comment,
+    completed false,
+  };
+})
