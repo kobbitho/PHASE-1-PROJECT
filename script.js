@@ -40,27 +40,51 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       body: JSON.stringify({ comment: comment })
     })
-    .then(response => response.json())
-    .then(data => {
+    .then(response => {
+      if (response.ok) {
       // Assuming the API returns a success message and the comment ID
-      console.log("Comment submitted successfully:", data.message);
-      console.log("Comment ID:", data.commentId);
+      console.log('Comment submitted successfully');
+    } else {
+      console.log('Failed to submit comment');
+    }
+  })
+  .catch(error => {
+     console.error("Error.message", error);
+  });
+      
   
       // Clear the comment textarea
       document.querySelector("#comment").value = "";
-    })
-    .catch(error => {
-      console.error("Error submitting comment:", error);
     });
-  });
+    
 
-  likeIcon.addEventListener("click", function(e) {
-    e.preventDefault();
-    likeIcon.classList.toggle("fa-heart");
-    likeIcon.classList.toggle("fa-heart-o");
-  });
 
+
+const shareButton = document.getElementById("share-quote");
+
+shareButton.addEventListener("click", function(e) {
+  e.preventDefault();
+
+  // Get the current quote and character
+  const quote = quoteText.innerHTML;
+  const character = characterText.innerHTML;
+
+  // Create a new window or tab with the quote and character
+  const url = `https://www.example.com/share?quote=${encodeURIComponent(quote)}&character=${encodeURIComponent(character)}`;
+  window.open(url, "_blank");
 });
+
+likeIcon.addEventListener("click", function(e) {
+  e.preventDefault();
+  likeIcon.classList.toggle("fa-heart");
+  likeIcon.classList.toggle("fa-heart-o");
+});
+
+
+  });
+
+  
+
   
 
 
