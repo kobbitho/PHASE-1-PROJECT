@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
 </head>
 <body>
-    <div class="container">
+    <div class="quote-wrapper">
         <h1>Winter is Coming...</h1>
         <p>Get a random Game of Thrones quote!!</p>
+        <div id="quote-box">
+           <p id="quote"></p>
+           <span id="character"></span>
+        </div>
         <button id="generate-quote">Generate Quote</button>
         <div id="quote-box">
-            <p id="quote"></p>
-            <p id="character"></p>
             <div id="actions">
                 <div id="reactions">
                     <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
@@ -23,11 +25,11 @@
                 <button id="submit-comment">Submit</button>
             </div>
             <button id="share-quote">share</button>
-        </div>
     </div>
     <script src="script.js"></script>
-    <script>function myFunction(x) {
-        x.classList.toggle("fa-thumbs-down")};
+    <script>
+    function myFunction(x) {
+        x.classList.toggle("fa-thumbs-down")};    
 </script>
 </body>
 </html>
