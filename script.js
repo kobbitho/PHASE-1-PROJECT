@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const generateQuoteButton = document.getElementById("generate-quote");
   const quoteText = document.getElementById("quote");
-  const characterText = document.getElementById("character");
+  const characterName = document.getElementById("character-name");
   const likeIcon = document.getElementById("like-icon");
   const commentTextarea = document.getElementById("comment"); //Reference for commentTextarea
   const saveButton = document.getElementById("saveButton"); // this is the reference for save button
@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(response => response.json())
       .then(data => {
         quoteText.innerHTML = data.sentence;
-        characterText.innerHTML = `${data.character}`;
+        //characterName.innerHTML = `${data.character}`;
+        
 
       })
       .catch(error => {
