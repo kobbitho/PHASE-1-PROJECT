@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    url ="https://api.gameofthronesquotes.xyz/v1/random"
+    baseURL ="https://api.gameofthronesquotes.xyz/v1/random"
 
   const generateQuoteButton = document.getElementById("generate-quote");
   const quoteText = document.getElementById("quote");
@@ -15,9 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(response => response.json())
       .then(data => {
         quoteText.innerHTML = data.sentence;
-        //characterName.innerHTML = `${data.character}`;
-        
-
+        characterName.innerHTML = `${data.character.name}`;
+      
       })
       .catch(error => {
         console.error("Error fetching quote", error);
