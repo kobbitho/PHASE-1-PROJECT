@@ -118,8 +118,6 @@ body {
     justify-content: space-around;
     margin-top: 10px;
     cursor: pointer;
-    
-    
   }
   
   .fas {
@@ -140,14 +138,4 @@ body {
     margin-top: 10px;
     resize: none; /* Disable comment box resizing */
     border-style: none;
-  }
-  
-  #submit-comment {
-    background-color: #00325E;
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top: 5px;
   }

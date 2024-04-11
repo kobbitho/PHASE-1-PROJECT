@@ -6,6 +6,7 @@
     <title>Game of Thrones Quote Generator</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <link rel="icon" href="./images/dragon-house.svg" type="image/x-icon">
 </head>
 <body>
     <div class="quote-wrapper">
@@ -14,10 +15,9 @@
         <br>
         <div id="quote-box">
            <p id="quote"></p>
-           <span id="character-name"></span>
+           <p id="character-name"></p>
            <p id="house-name"></p>
         </div>
-        <br>
         <br>
         <br>
         <button id="generate-quote">Generate Quote</button>
@@ -25,15 +25,12 @@
         <div id="quote-box">
             <div id="actions">
                 <div id="reactions">
-                    <i onclick="myFunction(this)" class="fa fa-thumbs-up" style="font-size: 48px; color: #113250;"></i>
+                    <i onclick="myFunction(this)" id="likeIcon" class="fa fa-thumbs-up" style="font-size: 48px; color: #113250;"></i>
                     <br>
                 </div>
-
             </div>
-
             <div>
                 <button id="saveButton">Save</button>
-            
             <button id="share-button">share</button>
     </div>
     <script src="script.js"></script>
