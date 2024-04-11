@@ -7,7 +7,8 @@ body {
     align-items: center;
     justify-content: center;
     background-size: cover;
-    background-image: url("https://t3.ftcdn.net/jpg/06/75/52/98/240_F_675529853_wmib4MamclwIZDNCol7I4yQ0eqMiKAeP.jpg")
+    /* background-repeat: no-repeat; */
+    background-image: url("./images/360_F_675529853_wmib4MamclwIZDNCol7I4yQ0eqMiKAeP.jpg")
     ;
     color: rgb(255, 255, 255);
     
@@ -15,7 +16,7 @@ body {
   
   .quote-wrapper{
     text-align: center;
-    padding: 50px;
+    padding: 40px;
     border-radius: 10px;
     box-shadow: 0 20px 10px ;
     margin: 70px auto;
@@ -69,6 +70,7 @@ body {
     cursor: pointer;
     margin: 3px;
     box-shadow: 0 20px 10px ;
+    margin-bottom: 20px;
     
   }
   
@@ -91,7 +93,7 @@ body {
   
   #quote-box span{
     font-weight: bold;
-    margin-top: 10px;
+    margin-bottom: 0px;
     display:block;
     position: relative;
     float: right;
@@ -149,5 +151,3 @@ body {
     cursor: pointer;
     margin-top: 5px;
   }
-  
-  
