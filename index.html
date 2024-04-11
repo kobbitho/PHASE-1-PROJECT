@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game of Thrones Quote Generator</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <link rel="stylesheet" href="">  
     <link rel="icon" href="./images/dragon-house.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <div class="quote-wrapper">
@@ -22,21 +23,14 @@
         <br>
         <button id="generate-quote">Generate Quote</button>
         <br>
-        <div id="quote-box">
-            <div id="actions">
-                <div id="reactions">
-                    <i onclick="myFunction(this)" id="likeIcon" class="fa fa-thumbs-up" style="font-size: 48px; color: #113250;"></i>
-                    <br>
-                </div>
-            </div>
-            <div>
+        <br>
+        <br>
+
+          <div class="actions">          
                 <button id="saveButton">Save</button>
             <button id="share-button">share</button>
-    </div>
+        </div>
     <script src="script.js"></script>
-    <script>
-    function myFunction(x) {
-        x.classList.toggle("fa-thumbs-down")};    
-</script>
+    
 </body>
 </html>

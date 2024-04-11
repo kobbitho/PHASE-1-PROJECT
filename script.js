@@ -1,34 +1,31 @@
+ //Initialize quote fetching and sharing functionality
 document.addEventListener("DOMContentLoaded", function () {
-
+   //Set the base URL for the quote API
     baseURL ="https://api.gameofthronesquotes.xyz/v1/random"
 
+   // Get references to the DOM elements
   const generateQuoteButton = document.getElementById("generate-quote");
   const quoteText = document.getElementById("quote");
   const characterName = document.getElementById("character-name");
-  const likeIcon = document.getElementById("like-icon");
   const saveButton = document.getElementById("saveButton"); // this is the reference for save button
-  const houseName = document.getElementById("house-name")
+  const houseName = document.getElementById("house-name");
 
-  let  likeCount =0; //variable to store current number of likes
-  likeCount.addEventListener("click", function() {
-    likeCount = likeCount ++; //incre
-    likeIcon.innerHTML = likeCount;
-  
-  document.getElementById("like-count").innerHTML = likeCount});
-
-
+    //Add a click event listener to the generate quote button
   generateQuoteButton.addEventListener("click", function () {
+    // Define the function to fetch the quote from the API
+
     fetch("https://api.gameofthronesquotes.xyz/v1/random")
+
+    //Fetches a random quote from the API and updates the quote text and character name on the page.
+     // @returns a promise that resolves when the quote has been successfully fetched and displayed.
+     
       .then(response => response.json())
       .then(data => {
         quoteText.innerHTML = data.sentence;
-        characterName.innerHTML = `${data.character.name} (${data.character.house.name})`;
-        
-      
+        characterName.innerHTML = `${data.character.name} (${data.character.house.name}).`;
       })
       .catch(error => {
         console.error("Error fetching quote", error);
-
       });
   });
 
@@ -51,8 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-
-
+  //Add a click event listener to the share button
   const shareButton = document.getElementById("share-button");
 
   shareButton.addEventListener("click", function (e) {
@@ -66,17 +62,19 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-
   saveButton.addEventListener("click", function (e) {
     e.preventDefault();
 
-    
+    //saveButton.addEventListener("click", saveQuote);
+   
     // Save the quote to local storage
     localStorage.setItem("savedQuote", quote);
     localStorage.setItem("savedCharacter", characterName);
     localStorage.setItem("savedHouse", houseName.textContent);
 
     console.log("Quote saved successfully!");
-  });  
+  });
   
-});
+});  
+
+  

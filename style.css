@@ -40,7 +40,7 @@ body {
   }
   
   p {
-    font-size: 0.7em;
+    font-size: 0.8em;
     margin-bottom: 10px;
   }
   .p ::after{
@@ -67,10 +67,9 @@ body {
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
-    cursor: pointer;
-    margin: 3px;
+    cursor: default;
     box-shadow: 0 20px 10px ;
-    margin-bottom: 20px;
+
     
   }
   
@@ -139,3 +138,34 @@ body {
     resize: none; /* Disable comment box resizing */
     border-style: none;
   }
+.quote-ratings-container {
+  display: flex;
+  justify-content: left;
+  padding: 30px 0;
+  
+}
+.quote-rating{
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  cursor: default;
+}
+
+.quote-rating:not(:last-child) {
+  margin-right: 12px;
+}
+
+.quote-rating-selected > .quote-rating-button,
+.quote-rating-selected > .quote-rating-count {
+  color: #00325E;
+}
+
+.quote-rating-button {
+  margin-right: 6px;
+  cursor: pointer;
+  color: #00325E;
+}
+
+.quote-rating:not(.quote-rating-selected) > .quote-rating-button:hover {
+ color: #1d4161; 
+}
