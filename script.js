@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
 
     //saveButton.addEventListener("click", saveQuote);
-   
+
     // Save the quote to local storage
     localStorage.setItem("savedQuote", quote);
     localStorage.setItem("savedCharacter", characterName);
