@@ -109,6 +109,9 @@ An additional API (e.g., https://api.example.com/characters/${characterId}) is n
 
 You can feel free to fork the code and make modifications to suit your needs. Any pull requests with improvements or bug fixes are welcome!
 
+# Live link
+https://github.com/kobbitho/PHASE-1-PROJECT.git
+
 ## Technologies used
 
 1. HTML
