@@ -93,7 +93,20 @@ An additional API (e.g., https://api.example.com/characters/${characterId}) is n
 
     -If you're using a different API for character house information, update the fetchcharacterHouse function accordingly.
 
-    ##
+## Usage
+
+    -Include the JavaScript code in your HTML page.
+
+    -The page should display a button for generating quotes, a section for displaying the quote and character information, buttons for sharing and saving, and potentially an area to show the character's house name.
+
+    -Clicking the "Generate Quote" button fetches a random quote and updates the page.
+
+    -Clicking the "Share" button creates an Instagram URL with the current quote and character details.
+
+    -Clicking the "Save" button saves the quote and character information to local storage.
+
+## 
+
 
 
 
