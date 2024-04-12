@@ -110,7 +110,8 @@ An additional API (e.g., https://api.example.com/characters/${characterId}) is n
 You can feel free to fork the code and make modifications to suit your needs. Any pull requests with improvements or bug fixes are welcome!
 
 # Live link
-https://github.com/kobbitho/PHASE-1-PROJECT.git
+
+ https://github.com/kobbitho/PHASE-1-PROJECT.git
 
 ## Technologies used
 
@@ -118,6 +119,15 @@ https://github.com/kobbitho/PHASE-1-PROJECT.git
 2. Github
 3. Javascript
 
+## Support and contact details
+
+[github](github.com/kobbitho)
+
+
+### License
+
+The content of this site is licensed under the MIT license
+Copyright (c) 2024.
 
 
 
